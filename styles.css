@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    height: 100vh;
+}
+
+
+.header {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    background-color: blue;
+    display: grid;
+    grid-template: 1fr 1fr / 2fr 1fr;
+    padding: 32px 64px;
+}
+
+.header > div {
+    display: flex;
+}
+
+.sidebar {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    font-size: 1.5rem;
+    padding: 32px;
+    background-color: red;
+}
+
+.sidebar > * {
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+    margin-bottom: 64px;
+}
+
+.main-content {
+    display: grid;
+    grid-row: 2 / 3;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: green;
+    gap: 20px;
+    padding: 20px;
+}
+
+.main-content > div > p {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.projects {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+
+.announcements {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.trending {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.projects-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 20px;
+    align-items: end;
+}
+
+.card {
+    height: 250px;
+    background-color: gray;
+}
+
+.announcements-container {
+    background-color: gray;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 32px 16px 32px;
+}
+
+.announcement {
+    flex: 1;
+    padding: 16px;
+}
+
+.announcement:not(:last-child) {
+    border-bottom: 1px solid gainsboro;
+}
+
+.trending-container {
+    background-color: gray;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 32px 16px;
+    padding: 32px;
+    flex: 1;
+}
+
+
+
