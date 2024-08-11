@@ -81,6 +81,7 @@ button[type="button"] {
     border: none;
     font-size: 1rem;
     font-weight: 700;
+    cursor: pointer;
 }
 
 button[type="button"]:hover {
@@ -115,6 +116,7 @@ button[type="button"]:hover {
 
 .sidebar > div:not(.top) > div:hover {
     transform: scale(1.1);
+    cursor: pointer;
 }
 
 
@@ -275,4 +277,5 @@ button[type="button"]:hover {
 .announcements-container > div:hover {
     background-color: #f3f4f6;
     border-radius: var(--border-radius);
+    cursor: default;
 }
